@@ -5,12 +5,14 @@ public class PaternityTest {
     ArrayList<String> menArray;
     HashSet<Integer> resultValues = new HashSet<>();
     String childString;
+    String motherString;
 
     public int[] possibleFathers(String child, String mother, String[] men) {
         int m = child.length() / 2;
         ArrayList<Integer> sorts = new ArrayList<>();
         menArray = new ArrayList<>(Arrays.asList(men));
         childString = child;
+        motherString = mother;
         generateCombinations(0, m, sorts);
         return resultValues.stream().mapToInt(Integer::intValue).toArray();
     }
@@ -20,9 +22,13 @@ public class PaternityTest {
             doTest(sorts);
         }
         for (int i = start; i < childString.length(); i++) {
-            sorts.add(i);
+            if (motherString.charAt(i) == childString.charAt(i)) {
+                sorts.add(i);
+            }
             generateCombinations(i + 1, m, sorts);
-            sorts.remove(sorts.size() - 1);
+            if (motherString.charAt(i) == childString.charAt(i)) {
+                sorts.remove(sorts.size() - 1);
+            }
         }
     }
 
@@ -34,6 +40,7 @@ public class PaternityTest {
             for (Integer sort : sorts) {
                 childBuilder.deleteCharAt(sort);
                 manBuilder.deleteCharAt(sort);
+
             }
             if (manBuilder.compareTo(childBuilder) == 0) {
                 resultValues.add(i);
@@ -41,7 +48,7 @@ public class PaternityTest {
         }
     }
 
-//    public int[] possibleFathers(String child, String mother, String[] men)
+    //    public int[] possibleFathers(String child, String mother, String[] men)
 //    {
 //        int[] poss = new int[men.length];
 //
@@ -62,11 +69,11 @@ public class PaternityTest {
     public static void main(String[] args) {
         System.out.println(Arrays.toString(new PaternityTest().possibleFathers("WXETPYCHUWSQEMKKYNVP",
                 "AXQTUQVAUOSQEEKCYNVP",
-        new String[] { "WNELPYCHXWXPCMNKDDXD",
-                "WFEEPYCHFWDNPMKKALIW",
-                "WSEFPYCHEWEFGMPKIQCK",
-                "WAEXPYCHAWEQXMSKYARN",
-                "WKEXPYCHYWLLFMGKKFBB" }
+                new String[]{"WNELPYCHXWXPCMNKDDXD",
+                        "WFEEPYCHFWDNPMKKALIW",
+                        "WSEFPYCHEWEFGMPKIQCK",
+                        "WAEXPYCHAWEQXMSKYARN",
+                        "WKEXPYCHYWLLFMGKKFBB"}
 
         )));
     }
