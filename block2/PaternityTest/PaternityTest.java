@@ -48,24 +48,6 @@ public class PaternityTest {
         }
     }
 
-    //    public int[] possibleFathers(String child, String mother, String[] men)
-//    {
-//        int[] poss = new int[men.length];
-//
-//        int nf = 0;
-//        for (int i = 0; i < men.length; i++)
-//        {
-//            int fc = 0, mc = 0;
-//            for (int j = 0; j < men[i].length(); j++)
-//            {
-//
-//            }
-//            if (fc == mc) poss[nf++] = i;
-//        }
-//        int[] res = new int[nf];
-//        for (int i = 0; i < nf; i++) res[i] = poss[i];
-//        return res;
-//    }
     public static void main(String[] args) {
         System.out.println(Arrays.toString(new PaternityTest().possibleFathers("WXETPYCHUWSQEMKKYNVP",
                 "AXQTUQVAUOSQEEKCYNVP",
