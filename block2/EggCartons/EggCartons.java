@@ -1,5 +1,4 @@
 public class EggCartons {
-    int minCnt = -1;
 
     public int minCartons(int n) {
         if (n < 6 || n % 2 != 0) return -1;
