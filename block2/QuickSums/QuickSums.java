@@ -1,7 +1,3 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Objects;
 
 public class QuickSums {
 
@@ -13,11 +9,9 @@ public class QuickSums {
 
     int search(String numbers, int sum, int min, int index, int count, long temp) {
         if (index == numbers.length()) {
-            System.out.println("leaf = " + temp);
             if (temp == sum && (min == -1 || count - 1 < min)) {
                 min = count - 1;
             }
-            System.out.println("min = " + min);
             return min;
         }
 
@@ -29,7 +23,8 @@ public class QuickSums {
 
     public static void main(String[] args) {
         QuickSums quickSums = new QuickSums();
-        System.out.println(quickSums.minSums("303",
-                6));
+        System.out.println(quickSums.minSums("9230560001",
+                71
+                ));
     }
 }
