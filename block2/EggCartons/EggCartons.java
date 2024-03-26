@@ -10,7 +10,7 @@ public class EggCartons {
 
         dp[0] = 0;
         for (int i = 6; i <= n; i += 6) {
-            dp[i] = i / 6; // 只用6个鸡蛋的纸盒
+            dp[i] = i / 6;
         }
         for (int i = 8; i <= n; i += 8) {
             dp[i] = i / 8;
