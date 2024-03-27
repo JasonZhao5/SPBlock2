@@ -1,0 +1,54 @@
+*******************
+* Group practice *
+*******************
+*List the problems you attempted, your scores so far for each
+*problem, and which Java API Classes and methods you used to solve
+*each problem.
+*Eg. SlowKeyBoard: 90 out of 90
+*ArrayList (size, add, get), Arrays.sort
+
+Problem1: MonstersValley2: 90 out of 90
+Math(min)
+
+Problem2: QuickSums: 90 out of 90
+
+
+-- Reflection --
+*Were the problems attempted in the lab easy/medium/challenging?
+*After this practice, how confident you feel when solving this
+*problem type?
+*What else did you learn from the group practice?
+
+MonstersValley2 would be relatively simple to solve using recursion.
+QuickSums is more complicated and this problem requires some effort in handling strings.
+It was difficult for me to simulate the recursive logic of the machine in my brain at first,
+especially when some operations on array elements were required during the recursive process,
+such as string operations. But with more practice, I started to get used to it.
+I practiced on my own and had a short discussion with Feng Wu.
+
+************************
+* Individual practice *
+************************
+List the problems you attempted, and your scores so far for each
+problem, and which Java API Classes and methods you used to solve
+each problem.
+FracCount: 7 out 100
+ HashMap (containsKey, put, get), ArrayList (size, add, get,
+remove)
+
+Problem3: EggCartons: 90 out of 100
+Math(min)
+
+Problem4: PaternityTest: 100 out of 100
+String(charAt) ArrayList(add,stream(sorted))
+
+
+-- Reflection --
+*Explain the rationale behind your choice of individual practice.
+*Which area you focused on improving (eg. speed, fluency, algorithmic
+*design, coding)?
+*What are your goals for the next block of practice？
+
+
+EggCartons is an easy problem, and it is suitable for practicing dp.
+I prefer to improve my speed and algorithmic design, which can make me more effective.
